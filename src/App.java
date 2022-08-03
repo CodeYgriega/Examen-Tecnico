@@ -131,22 +131,29 @@ public class App {
     //funcion del ejercicio 2: 
     public static List<Integer> devolverNuevoArray(List<Integer> array1, List<Integer> array2, List<Integer> array3){
 
+        //creamos el array que devolvera la funcion
         List<Integer> arrayFinal = new ArrayList<Integer>();
 
+        //recorremos el primer array
         for(int i = 0; i < array1.size(); i++){
-            
+            //variable para poder iterar y multiplicar facilmente
             int numerosDeArray1 = array1.get(i);
-
+        //recorremos el segundo array
             for(int j = 0; j < array1.size(); j++){
-
+                //variable para poder iterar y multiplicar facilmente
                 int numerosDeArray2 = array2.get(j);
-
+            //recorremos el tercer array
                 for(int k = 0; k < array1.size(); k++){
-
+                    //variable para poder iterar y multiplicar facilmente
                     int numerosDeArray3 = array3.get(k);
-                    System.out.println(numerosDeArray1 + "" + numerosDeArray2 + "" + numerosDeArray3);
+
+                    //prueba para ver que numeros iba tomando en cada iteracion
+                    //System.out.println(numerosDeArray1 + "" + numerosDeArray2 + "" + numerosDeArray3);
+
+                    //en esta variable se van guardando los numeros ya multiplicados
                     int numerosMultiplicados = numerosDeArray1 * numerosDeArray2 * numerosDeArray3;
 
+                    //y por ultimo vamos añadiendo cada numero multiplicado al array que vamos a devolver
                     arrayFinal.add(numerosMultiplicados);
 
                 }
@@ -154,6 +161,7 @@ public class App {
             }
 
         }
+        //pintamos el array final y lo retornamos
         System.out.println(arrayFinal);
         return arrayFinal;
     }
